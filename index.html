@@ -19,49 +19,68 @@
 
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script> -->
 
-    <div id="map">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map">
 
+            </div>
+        </div>
     </div>
     <div class="row"><br></div>
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <div class="input-group mb-3">
-                <!-- <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                    aria-describedby="basic-addon2" id="inputVal">
-                <div class="input-group-append">
-                    <button class="input-group-text" type="button"  id="basic-addon2" onclick=getInputValue();>Search</button> -->
-
-                    <input type="text" id="val" placeholder="Type something...">
-                    <button type="button" id="myInput">Get Value</button>
-                </div>
+            <div>
+                <button type="button" id="btnRest" class="btn btn-primary btn-lg">Get Restaurants</button>
             </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnBar" class="btn btn-primary btn-lg">Get Bars</button>
+            </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnCafe" class="btn btn-primary btn-lg">Get Cafes</button>
+            </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnBakery" class="btn btn-primary btn-lg">Get Bakeries</button>
+            </div>
+
         </div>
+
         <div class="col-md-4"></div>
     </div>
+
+    <div class="row"><br></div>
+    <div class="row"><br></div>
 
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class=col-md-4>
-            <div>
-                Restaurant Bonggiorno
-            </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                <p>Value: <span id="demo"></span></p>
+              </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
+
     </div>
 
+    <div class="row"><br></div>
 
 
 
-   <!-- For current location -->
-   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places&callback=initMap"></script> -->
 
-   <!-- For retireving the library -->
-   
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
-   
-   
-   <script src="script.js"></script>
+    <!-- For current location -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places&callback=initMap"></script> -->
+
+    <!-- For retireving the library -->
+
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
+
+
+    <script src="script.js"></script>
 
 
 
