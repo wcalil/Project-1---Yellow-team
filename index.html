@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Fair Thought</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+
+</head>
+
+<body>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script> -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map">
+
+            </div>
+        </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                <button type="button" id="btnRest" class="btn btn-primary btn-lg">Get Restaurants</button>
+            </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnBar" class="btn btn-primary btn-lg">Get Bars</button>
+            </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnCafe" class="btn btn-primary btn-lg">Get Cafes</button>
+            </div>
+            <div><br></div>
+            <div>
+                <button type="button" id="btnBakery" class="btn btn-primary btn-lg">Get Bakeries</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row"><br></div>
+    <div class="row"><br></div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                <p>Value: <span id="demo"></span></p>
+              </div>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row"><br></div>
+
+
+
+
+    <!-- For current location -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places&callback=initMap"></script> -->
+
+    <!-- For retireving the library -->
+
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
+
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
