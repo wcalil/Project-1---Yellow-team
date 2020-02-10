@@ -1,6 +1,8 @@
 var map;
 var infowindow;
 var idRestaurant;
+var request;
+var selectedRestaurant = document.getElementById("selectedRestaurant");
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("distance");
@@ -86,7 +88,7 @@ function initMapPlaces(type) {
             map: map
         });
 
-        var request = {
+        request = {
             location: currentLocation,
             radius: userDistance,
             types: [type],
@@ -100,34 +102,67 @@ function initMapPlaces(type) {
 
         // Place Restaurants in the marker using a loop
 
+        var resultsArray = [];
+
         function callback(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     createMarker(results[i]);
-                    console.log(results[i].name)
+                    // console.log(results[i].name)
+                    // resultsArray = results[i];
+                    // console.log(resultsArray)
 
-                    var requestPriceRating = {
-                        placeId: results[i].place_id,
-                        fields: ['name', 'price_level', 'rating']
-                    };
                 }
 
-                // Use the same function get price and rating information with the function getDetails and the id
-                service.getDetails(requestPriceRating, callbackPriceRating);
-               
-                function callbackPriceRating(placePriceRating, status) {
-                    for (var i = 0; i < results.length; i++) {
-                            if (status == google.maps.places.PlacesServiceStatus.OK) {
-                            console.log(placePriceRating);
-                        }
+                var randomRestaurant = Math.floor((Math.random() * results.length) + 1);
+                console.log(randomRestaurant)
+
+
+                var requestPrice = {
+                    placeId: results[randomRestaurant].place_id,
+                    fields: ['name', 'price_level', 'rating', 'formatted_address']
+                };
+
+                console.log(requestPrice)
+                service.getDetails(requestPrice, callbackPrice);
+                
+
+                function callbackPrice(price, status) {
+                    console.log(price);
+                    console.log(price.price_level);
+                 
+                    if (price.price_level == sliderPrice.value) {
+
+                     
+                        var paragraph1 = document.createElement("p");
+                        var node1 = document.createTextNode("Name of the Place We Selected For You: " + price.name);
+                        paragraph1.appendChild(node1);
+                        selectedRestaurant.appendChild(paragraph1)
+
+                        var paragraph2 = document.createElement("p");
+                        var node1 = document.createTextNode("Price Index: " + price.price_level);
+                        paragraph2.appendChild(node1);
+                        selectedRestaurant.appendChild(paragraph2)
+
+                        var paragraph3 = document.createElement("p");
+                        var node1 = document.createTextNode("Rating: " + price.rating);
+                        paragraph3.appendChild(node1);
+                        selectedRestaurant.appendChild(paragraph3)
+
+                        var paragraph4 = document.createElement("p");
+                        var node1 = document.createTextNode("Address: " + price.formatted_address);
+                        paragraph4.appendChild(node1);
+                        selectedRestaurant.appendChild(paragraph4)
+
+                    }
+
+                    else {
+                        service.nearbySearch(request, callback);
+                      
                     }
                 }
-                console.log(results[0])
-                console.log(results[0].place_id)
             }
         }
-
-
 
         function createMarker(place) {
             var placeLoc = place.geometry.location;
@@ -135,20 +170,6 @@ function initMapPlaces(type) {
                 map: map,
                 position: place.geometry.location
             })
-
-
-
-            // function getDetails(details) {
-            //     var queryURLforecast ="https://maps.googleapis.com/maps/api/place/details/json?place_id=2ffadeac9ba720db1d175c718483bdeecdd06190&fields=name,rating,formatted_phone_number&key=https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,rating,formatted_phone_number&key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw";
-            //     // var queryURLforecast = "https://maps.googleapis.com/maps/api/place/details/json?place_id=25faf0a7ef1056b980f3a19237cfa8e295668123&fields=name,rating,photos,website,price_level&key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw";
-            //     $.ajax({
-            //         url: queryURLforecast,
-            //         method: "GET"
-            //     }).then(function (response) {
-            //         console.log(details)
-
-            //     })
-            // }
 
 
             google.maps.event.addListener(marker, 'mouseover', function () {
@@ -161,5 +182,5 @@ function initMapPlaces(type) {
 
 }
 
-
 google.maps.event.addDomListener(window, 'load', initMap)
+

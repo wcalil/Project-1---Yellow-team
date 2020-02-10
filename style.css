@@ -42,3 +42,11 @@
     background: #4CAF50;
     cursor: pointer;
   }
+
+  #selectedRestaurant{
+    font-weight: bold;
+    font-size: larger;
+    margin: auto;
+    background-color: lightgray;
+    color: teal;
+    }
