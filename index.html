@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Materialize.css</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href ="style.css">
+    <!-- Compiled and minified JavaScript -->
+
+</head>
+<body>
+
+  <!--Dark mode for dinner, sophisticated adults for romance (add)-->
+    <nav class="nav-extended">
+
+        <div class="nav-content white">
+
+
+            <div class="col l2">
+                <a class="btn-floating  btn-large waves-effect waves-light" id="dine">
+                    <i class="material-icons yellow lighten-1">local_dining</i>
+                </a>
+
+
+
+
+                <span class="nav-title yellow-text lighten-1" id="nav">Food Fair Thought</span>
+
+
+
+            </div>
+
+
+            <a class="btn-floating dropdown-button  btn-large halfway-fab waves-effect waves-light"
+                onclick="$('.dropdown-button').dropdown('open');" data-activates="dropdown1">
+                <i class="material-icons yellow lighten-1">add</i>
+
+                <!--Dropdown contents, add stuff later-->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">one</a></li>
+                    <li><a href="#!">two</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">three</a></li>
+                    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                </ul>
+
+            </a>
+        </div>
+    </nav>
+
+    <br><br>
+   
+
+    <div class="container">
+        <div class = "row">
+
+            <div class = "col l12 m8 s6"></div>
+    
+            <div class="card">
+                <div class="card-content">
+                    <blockquote>Select your options down below</blockquote>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class ="active" href="#test4">Food Category</a></li>
+                        <li class="tab"><a href="#test5">Price range?</a></li>
+                        <li class="tab"><a href="#test6">Distance</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="test4">
+
+                        <div class="row">
+                            <div class="col s12 l2">
+                                <div class="card white"> 
+                                    <span class="black-text text-center "> Food
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="col s12 l2">
+                                <div class="card white"> 
+                                    <span class="black-text text-center"> Food
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col s12 l2">
+                                <div class="card white"> 
+                                    <span class="black-text text-center"> Food
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col s12 l2">
+                                <div class="card white"> 
+                                    <span class="black-text text-center"> Food
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col s12 l2">
+                                <div class="card white"> 
+                                    <span class="black-text text-center"> Food
+                                    </span>
+                                </div>
+                            </div>
+                            
+
+
+
+                        </div>
+                        
+                    </div>
+                    <div id="test5">
+
+                        <form action="#">
+                            <a class= "large btn yellow lighten-1">
+                                <input name="group1" type="radio" id="price1" />
+                                <label class="green-text" for="price1">$</label>
+                            </a>
+
+                            <a class= "large btn yellow lighten-1">
+                                <input name="group1" type="radio" id="price2" />
+                                <label class="green-text" for="price2">$$</label>
+                            </a>
+                            <a class= "large btn yellow lighten-1">
+                                <input name="group1" type="radio" id="price3" />
+                                <label class="green-text" for="price3">$$$</label>
+                            </a>
+                            <a class= "large btn yellow lighten-1">
+                                <input name="group1" type="radio" id="price4" />
+                                <label class="green-text" for="price4">$$$$</label>
+                            </a>
+                            <a class= "large btn yellow lighten-1">
+                                <input name="group1" type="radio" id="price5" />
+                                <label class="green-text" for="price5">$$$$$</label>
+                            </a>
+                            
+                        </form>
+
+                    </div>
+
+
+
+
+                    <div id="test6">Range(mi.)
+
+                        <form action="#">
+                            <p class="range-field">
+                                <input type="range" id="distance" min="0" max="100" />
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+
+                <br><br><br>
+
+                <!--Button to initiate Feature Discovery-->
+                <div class="row">
+                    <div class="col l12 m8 s6">
+                        <a class="btn-floating large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="open" onclick="$('.tap-target').tapTarget('open')">Randomize Meal</a>
+                        
+
+                        <a class="btn-floating large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+
+                        <a class="large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="submit">Submit
+                            
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+    
+    
+        </div>
+
+    </div>
+
+    
+
+    <!-- Element Showed -->
+    <div class="fixed-action-btn">
+
+        <a id="menu" class="waves-effect waves-light btn btn-floating btn-large yellow lighten-1 pulse">
+            <i class="material-icons black-text">sentiment_very_satisfied</i>
+        </a>
+
+    </div>
+    
+    
+    <!-- Tap Target Structure -->
+    <!-- data-targe abd data-activate-->
+    <div class="tap-target yellow lighten-1" data-activates="menu">
+        <div class="tap-target-content">
+            <h5>Are you Sure you want to randomize?</h5>
+            <a class="large btn  waves-effect waves-light white btn black-text">Do it!</a>
+            <li class ="searchHistory"></li>
+        </div>
+    </div>
+
+    
+
+    <footer class="page-footer yellow darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Yellow team
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <!--Hold Alt up and down-->
+    <!--Alt shift-->
+    <!--Ctrl-D adding text to multiple lines of code-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
+        

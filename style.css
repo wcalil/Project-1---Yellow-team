@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background-image: url("assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+}
+
+footer {
+    position:relative;
+}
+
+#nav {
+    position: relative;
+    left: 50px;
+    bottom: 2px;
+
+    
+}
+
+#dine {
+    position: relative;
+    left:30px;
+    bottom: 10px;
+}
+
+.h1 {
+    text-align: center;
+
+}
+
+#menu {
+
+    position: relative;
+    float:right;
+}
+
+#open {
+    position: relative;
+    float:left;
+    
+}
+
+#close {
+    position: relative;
+    float:left;
+    
+}
+
+#submit {
+    position: relative;
+    float:right;
+    
+
+
+}
