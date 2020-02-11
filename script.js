@@ -120,7 +120,7 @@ function initMapPlaces(type) {
 
                 var requestPrice = {
                     placeId: results[randomRestaurant].place_id,
-                    fields: ['name', 'price_level', 'rating', 'formatted_address']
+                    fields: ['name', 'price_level', 'rating', 'formatted_address','icon', 'url']
                 };
 
                 console.log(requestPrice)
@@ -130,12 +130,13 @@ function initMapPlaces(type) {
                 function callbackPrice(price, status) {
                     console.log(price);
                     console.log(price.price_level);
-                 
+               
                     if (price.price_level == sliderPrice.value) {
-
-                     
+                        
+                        
+                        
                         var paragraph1 = document.createElement("p");
-                        var node1 = document.createTextNode("Name of the Place We Selected For You: " + price.name);
+                        var node1 = document.createTextNode("Your Food Place: " + price.name);
                         paragraph1.appendChild(node1);
                         selectedRestaurant.appendChild(paragraph1)
 
@@ -152,6 +153,8 @@ function initMapPlaces(type) {
                         var paragraph4 = document.createElement("p");
                         var node1 = document.createTextNode("Address: " + price.formatted_address);
                         paragraph4.appendChild(node1);
+                        paragraph4.style.borderBottom = "solid";
+                        paragraph4.style.paddingBottom = "2%";
                         selectedRestaurant.appendChild(paragraph4)
 
                     }
