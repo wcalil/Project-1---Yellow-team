@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+  
+}
+
+body{
+  background-image: url("./backgroundImage.jpg");
+}
+
+h1{
+  color: teal;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.col-md-2, .col-md-4, .col-md-12{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+h2{
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+#map{
+    height: 500px;
+
+  }
+
+.slidecontainer {
+    width: 100%;
+}
+  
+button{
+  width:100%;
+}
+
+#btnRest{
+  background-color: teal;
+}
+
+#btnBar{
+  background-color: teal;
+}
+
+#btnCafe{
+  background-color: teal;
+}
+
+#btnBakery{
+  background-color: teal;
+}
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: teal;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: teal;
+    cursor: pointer;
+  }
+
+  #selectedRestaurant{
+    font-weight: bold;
+    font-size: larger;
+    margin: auto;
+    background-color: lightgray;
+    color: teal;
+    }
