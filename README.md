@@ -11,6 +11,6 @@ It can go two ways:
 -Fully random
 -Distance, Allergies, Dine in or takeout,budget (money willing to spend)
 
--More defined (can bve added as an additional question)
+-More defined (can be added as an additional question)
 -what type of food?(specific types i.e. chinese, mexican, japanese, italian, American, Brazilian)
 
