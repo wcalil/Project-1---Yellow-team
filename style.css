@@ -5,7 +5,8 @@
 }
 
 body{
-  background-image: url("./backgroundImage.jpg");
+  background-image: url("./assets/backgroundImage.jpg");
+  margin-bottom: 2%;
 }
 
 html {
@@ -93,8 +94,8 @@ button{
     font-weight: bold;
     font-size: larger;
     margin: auto;
-    background-color: lightgray;
+    background-color: whitesmoke;
     color: teal;
+    padding-left: 20px;
+    padding-right: 20px;
     }
-
-  
