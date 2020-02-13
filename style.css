@@ -8,6 +8,10 @@ body{
   background-image: url("./backgroundImage.jpg");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1{
   color: teal;
   font-weight: bold;
@@ -92,3 +96,5 @@ button{
     background-color: lightgray;
     color: teal;
     }
+
+  

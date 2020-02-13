@@ -51,7 +51,7 @@ function initMap() {
             zoom: 12,
             center: currentLocation
         });
-    
+
         var marker = new google.maps.Marker({
             position: currentLocation,
             map: map
@@ -61,7 +61,7 @@ function initMap() {
 // Retrieve restaurants nearby
 function initMapPlaces(type) {
     navigator.geolocation.getCurrentPosition(function (position) {
-        
+
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
         var latText = parseFloat(lat);
@@ -71,21 +71,21 @@ function initMapPlaces(type) {
             zoom: 12,
             center: currentLocation
         });
-        
+
         var marker = new google.maps.Marker({
             position: currentLocation,
             map: map
         });
-       
+
         request = {
             location: currentLocation,
             radius: userDistance,
             types: [type],
             // minPriceLevel: 0,
             maxPriceLevel: sliderPrice.value,
-            fields: ["formatted_address"]    
+          
         };
-        
+
         infowindow = new google.maps.InfoWindow();
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, callback);
@@ -94,17 +94,17 @@ function initMapPlaces(type) {
 
 // Place Restaurants in the marker using a loop
 function callback(results, status) {
-   
+    console.log(results)
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
-                  
+
         }
-        
+
         randomRestaurant = Math.floor((Math.random() * results.length));
-       
-        var paragraph1 = document.createElement("p");
-        var node1 = document.createTextNode("Your Food Place: " + results[randomRestaurant].name);
+
+        var paragraph1 = document.createElement("h2");
+        var node1 = document.createTextNode(results[randomRestaurant].name);
         paragraph1.appendChild(node1);
         selectedRestaurant.appendChild(paragraph1)
 
@@ -122,36 +122,58 @@ function callback(results, status) {
 
     var requestDetails = {
         placeId: results[randomRestaurant].place_id,
-        fields: ['name', 'price_level', 'rating', 'formatted_address', 'icon', 'url', 'photo']
+        fields: ['name', 'price_level', 'rating', 'formatted_address', 'icon', 'url', 'photo', 'website', 'formatted_phone_number']
     };
-  
+
     service.getDetails(requestDetails, callbackDetails);
 
 }
 
 
 function callbackDetails(details, status) {
-console.log(details)
+    console.log(details)
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
         var paragraph4 = document.createElement("p");
         var node1 = document.createTextNode("Address: " + details.formatted_address);
         paragraph4.appendChild(node1);
-        paragraph4.style.borderBottom = "solid";
-        paragraph4.style.paddingBottom = "2%";
         selectedRestaurant.appendChild(paragraph4)
 
+        // var webIcon = document.createElement("img");
+        // webIcon.setAttribute('src', 'Google-Logo.png');
+        // document.webIcon.setAttribute(<a href="http://www.addaxtactical.com"><img src='Google-Logo.png'></a>);
+        // {/* /* // webIcon.href = "http://www.cnn.com/";
+        // // webIcon.setAttribute('alt', 'Google Icon'); */
+        // webIcon.setAttribute('height', '50px');
+        // webIcon.setAttribute('width', '50px');
+        // selectedRestaurant.appendChild(webIcon);
+
+
+        var paragraph5 = document.createElement("p");
+        var node1 = document.createTextNode("URL: " + details.url);
+        paragraph5.appendChild(node1);
+        selectedRestaurant.appendChild(paragraph5)
+
+        var paragraph6 = document.createElement("p");
+        var node1 = document.createTextNode("Phone Number: " + details.formatted_phone_number);
+        paragraph6.appendChild(node1);
+        paragraph6.style.borderBottom = "solid";
+        paragraph6.style.paddingBottom = "2%";
+        selectedRestaurant.appendChild(paragraph6)
+   
+
     }
+    window.scrollTo(0, 10000);
 }
- 
+
 function createMarker(place) {
     var placeLoc = place.geometry.location;
-   
+
     var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location
-        
-        
+
+
     })
     google.maps.event.addListener(marker, 'mouseover', function () {
         infowindow.setContent(place.name + "<br>" + place.vicinity)
