@@ -244,6 +244,22 @@ function callbackDetails(details, status) {
         favoriteIcon.style.right = '80px'
         favoriteIcon.style.bottom = '20px'
         resultsDiv.appendChild(favoriteIcon);
+    
+        console.log(details)
+        
+        for(i = 0; i <= 4; i++){
+            
+        var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
+        var photoList = document.createElement("ul")
+        var photoIMG = document.createElement("img")
+            photoIMG.setAttribute("src", newPhotos)
+            photoList.append(photoIMG)
+            resultsDiv.appendChild(photoList)
+
+        }
+
+
+
 
         favoriteIcon.onclick = function() {
             saveRestaurant();
