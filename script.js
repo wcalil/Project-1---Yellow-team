@@ -236,7 +236,7 @@ function callbackDetails(details, status) {
         };
 
         var favoriteIcon = document.createElement("img");
-        favoriteIcon.setAttribute('src', './assets/favorites.png');
+        favoriteIcon.setAttribute('src', './assets/Favorites.png');
         favoriteIcon.setAttribute('height', '50px');
         favoriteIcon.setAttribute('width', '50px');
         favoriteIcon.setAttribute('alt', 'Favorite Icon');
@@ -247,16 +247,16 @@ function callbackDetails(details, status) {
     
         console.log(details)
         
-        for(i = 0; i <= 4; i++){
+        //for(i = 0; i <= 4; i++){
             
-        var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
-        var photoList = document.createElement("ul")
-        var photoIMG = document.createElement("img")
-            photoIMG.setAttribute("src", newPhotos)
-            photoList.append(photoIMG)
-            resultsDiv.appendChild(photoList)
+        //var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
+        //var photoList = document.createElement("ul")
+        //var photoIMG = document.createElement("img")
+          //  photoIMG.setAttribute("src", newPhotos)
+            //photoList.append(photoIMG)
+            //resultsDiv.appendChild(photoList)
 
-        }
+        //}
 
 
 
