@@ -156,6 +156,8 @@ function callbackDetails(details, status) {
         resultsDiv.setAttribute("id", idName);
         resultsDiv.style.position = 'relative'
         selectedRestaurant.appendChild(resultsDiv)
+        resultsDiv.style.borderBottom = "solid";
+        resultsDiv.style.margingBottom = "5%";
 
         var paragraph1 = document.createElement("h2");
         var node1 = document.createTextNode(details.name);
@@ -277,10 +279,6 @@ function callbackDetails(details, status) {
                 document.getElementById(idName).style.paddingBottom = "5%"
             }
         }
-
-        document.getElementById(idName).style.borderBottom = "solid";
-        document.getElementById(idName).style.margingBottom = "5%";
-
     }
     window.scrollTo(0, 10000);
 }
