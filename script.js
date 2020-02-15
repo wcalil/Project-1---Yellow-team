@@ -161,7 +161,7 @@ function callbackDetails(details, status) {
         resultsDiv.style.margingBottom = "5%";
 
         var infoHead = document.createElement("div");
-            infoHead.setAttribute("class", "infoHead l12");
+            infoHead.setAttribute("class", "infoHead");
 
         var infoText = document.createElement("div");
             infoText.setAttribute("class", "infoText");
@@ -221,36 +221,24 @@ function callbackDetails(details, status) {
             
             photoCarousel.appendChild(imageA)
             // photoList.append(photoIMG)
-             infoText.appendChild(photoCard)
+         
+            infoText.appendChild(photoCard)
 
-        favoriteIcon.onclick = function() {
-        arrayRestaurants.push({ 
-            name: details.name, 
-            price: details.price_level, 
-            rating: details.rating, 
-            address: details.formatted_address,
-            phoneNumber:  details.formatted_phone_number,
-            url: details.url, 
-            website: details.website
-        });
-            saveRestaurant();
-          };
+        }
+        
   
 
 
-        var myScreen = window.matchMedia("(max-width: 700px)")
-        mediaQuery(myScreen)
-        myScreen.addListener(mediaQuery)
+        // var myScreen = window.matchMedia("(max-width: 700px)")
+        // mediaQuery(myScreen)
+        // myScreen.addListener(mediaQuery)
 
-            
-
-
-        }
 
         $(document).ready(function(){
             $('.carousel.carousel-slider').carousel({fullWidth: true});
           });
 
+          resultsDiv.appendChild(infoHead)
           resultsDiv.appendChild(infoText)
           
           
@@ -311,7 +299,18 @@ function callbackDetails(details, status) {
       
           resultsDiv.append(infoFooter)
 
-
+          favoriteIcon.onclick = function() {
+            arrayRestaurants.push({ 
+                name: details.name, 
+                price: details.price_level, 
+                rating: details.rating, 
+                address: details.formatted_address,
+                phoneNumber:  details.formatted_phone_number,
+                url: details.url, 
+                website: details.website
+            });
+                saveRestaurant();
+              };
 
 
 
@@ -322,6 +321,7 @@ function callbackDetails(details, status) {
     }
     window.scrollTo(0, 10000);
 }
+
 
 
 function createMarker(place) {
