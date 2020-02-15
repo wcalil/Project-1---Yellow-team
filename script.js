@@ -151,16 +151,6 @@ function callbackDetails(details, status) {
     console.log(details)
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
-        arrayRestaurants.push({ 
-            name: details.name, 
-            price: details.price_level, 
-            rating: details.rating, 
-            address: details.formatted_address,
-            phoneNumber:  details.formatted_phone_number,
-            url: details.url, 
-            website: details.website
-        });
-
         var idName = JSON.stringify(details.name);
         var resultsDiv = document.createElement("div")
         resultsDiv.setAttribute("id", idName);
@@ -246,6 +236,16 @@ function callbackDetails(details, status) {
         resultsDiv.appendChild(favoriteIcon);
 
         favoriteIcon.onclick = function() {
+            
+        arrayRestaurants.push({ 
+            name: details.name, 
+            price: details.price_level, 
+            rating: details.rating, 
+            address: details.formatted_address,
+            phoneNumber:  details.formatted_phone_number,
+            url: details.url, 
+            website: details.website
+        });
             saveRestaurant();
           };
   
