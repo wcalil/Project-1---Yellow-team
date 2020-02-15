@@ -30,6 +30,11 @@ h2{
   text-align: center;
 }
 
+h3{
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
 #map{
     height: 500px;
 
