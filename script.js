@@ -151,21 +151,13 @@ function callbackDetails(details, status) {
     console.log(details)
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
-        arrayRestaurants.push({ 
-            name: details.name, 
-            price: details.price_level, 
-            rating: details.rating, 
-            address: details.formatted_address,
-            phoneNumber:  details.formatted_phone_number,
-            url: details.url, 
-            website: details.website
-        });
-
         var idName = JSON.stringify(details.name);
         var resultsDiv = document.createElement("div")
         resultsDiv.setAttribute("id", idName);
         resultsDiv.style.position = 'relative'
         selectedRestaurant.appendChild(resultsDiv)
+        resultsDiv.style.borderBottom = "solid";
+        resultsDiv.style.margingBottom = "5%";
 
         var paragraph1 = document.createElement("h2");
         var node1 = document.createTextNode(details.name);
@@ -236,7 +228,7 @@ function callbackDetails(details, status) {
         };
 
         var favoriteIcon = document.createElement("img");
-        favoriteIcon.setAttribute('src', './assets/favorites.png');
+        favoriteIcon.setAttribute('src', './assets/Favorites.png');
         favoriteIcon.setAttribute('height', '50px');
         favoriteIcon.setAttribute('width', '50px');
         favoriteIcon.setAttribute('alt', 'Favorite Icon');
@@ -247,21 +239,30 @@ function callbackDetails(details, status) {
     
         console.log(details)
         
-        for(i = 0; i <= 4; i++){
+        //for(i = 0; i <= 4; i++){
             
-        var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
-        var photoList = document.createElement("ul")
-        var photoIMG = document.createElement("img")
-            photoIMG.setAttribute("src", newPhotos)
-            photoList.append(photoIMG)
-            resultsDiv.appendChild(photoList)
+        //var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
+        //var photoList = document.createElement("ul")
+        //var photoIMG = document.createElement("img")
+          //  photoIMG.setAttribute("src", newPhotos)
+            //photoList.append(photoIMG)
+            //resultsDiv.appendChild(photoList)
 
-        }
+        //}
 
 
 
 
         favoriteIcon.onclick = function() {
+        arrayRestaurants.push({ 
+            name: details.name, 
+            price: details.price_level, 
+            rating: details.rating, 
+            address: details.formatted_address,
+            phoneNumber:  details.formatted_phone_number,
+            url: details.url, 
+            website: details.website
+        });
             saveRestaurant();
           };
   
@@ -278,10 +279,6 @@ function callbackDetails(details, status) {
                 document.getElementById(idName).style.paddingBottom = "5%"
             }
         }
-
-        document.getElementById(idName).style.borderBottom = "solid";
-        document.getElementById(idName).style.margingBottom = "5%";
-
     }
     window.scrollTo(0, 10000);
 }
