@@ -156,8 +156,6 @@ function callbackDetails(details, status) {
         resultsDiv.setAttribute("id", idName);
         resultsDiv.style.position = 'relative'
         selectedRestaurant.appendChild(resultsDiv)
-        resultsDiv.style.borderBottom = "solid";
-        resultsDiv.style.margingBottom = "5%";
 
         var paragraph1 = document.createElement("h2");
         var node1 = document.createTextNode(details.name);
@@ -236,24 +234,9 @@ function callbackDetails(details, status) {
         favoriteIcon.style.right = '80px'
         favoriteIcon.style.bottom = '20px'
         resultsDiv.appendChild(favoriteIcon);
-    
-        console.log(details)
-        
-        //for(i = 0; i <= 4; i++){
-            
-        //var newPhotos = details.photos[i].getUrl({maxWidth: 200, maxHeight: 200})
-        //var photoList = document.createElement("ul")
-        //var photoIMG = document.createElement("img")
-          //  photoIMG.setAttribute("src", newPhotos)
-            //photoList.append(photoIMG)
-            //resultsDiv.appendChild(photoList)
-
-        //}
-
-
-
 
         favoriteIcon.onclick = function() {
+            
         arrayRestaurants.push({ 
             name: details.name, 
             price: details.price_level, 
@@ -279,6 +262,10 @@ function callbackDetails(details, status) {
                 document.getElementById(idName).style.paddingBottom = "5%"
             }
         }
+
+        document.getElementById(idName).style.borderBottom = "solid";
+        document.getElementById(idName).style.margingBottom = "5%";
+
     }
     window.scrollTo(0, 10000);
 }

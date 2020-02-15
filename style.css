@@ -30,6 +30,11 @@ h2{
   text-align: center;
 }
 
+h3{
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
 #map{
     height: 500px;
 
@@ -99,3 +104,49 @@ button{
     padding-left: 20px;
     padding-right: 20px;
     }
+
+
+
+    #foodCard{
+      height: 210px;
+      width: 210px;
+      /* position: absolute; */
+      bottom: 100px;
+      right: 20px;
+      top: 10px;
+    }
+
+
+
+    .carousel.carousel-slider .carousel-item{
+      height: 210px;
+      width: 210px;
+      min-height: 210px;
+    }
+
+.carousel.carousel-slider{
+  height: 210px !important;
+}    
+
+
+#carousel-item{
+  height: 210px;
+}
+.carouselPhoto{
+  height: 210px;
+}
+
+.infoText{
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+
+.infoFooter{
+  display: flex;
+  justify-content: end;
+  
+  /* position: fixed; */
+  /* bottom: 0px; */
+}
