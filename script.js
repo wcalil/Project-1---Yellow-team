@@ -236,7 +236,7 @@ function callbackDetails(details, status) {
         };
 
         var favoriteIcon = document.createElement("img");
-        favoriteIcon.setAttribute('src', './assets/favorites.png');
+        favoriteIcon.setAttribute('src', './assets/Favorites.png');
         favoriteIcon.setAttribute('height', '50px');
         favoriteIcon.setAttribute('width', '50px');
         favoriteIcon.setAttribute('alt', 'Favorite Icon');
