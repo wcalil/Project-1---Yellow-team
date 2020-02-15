@@ -1,182 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Materialize.css</title>
-    <!--Import Google Icon Font-->
+    <title>Food Fair Thought</title>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href ="style.css">
-    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="./style.css">
+    
+
 
 </head>
-<body>
 
-  <!--Dark mode for dinner, sophisticated adults for romance (add)-->
+<body>
+    
     <nav class="nav-extended">
 
         <div class="nav-content white">
 
 
-            <div class="col l2">
-                <a class="btn-floating  btn-large waves-effect waves-light" id="dine">
-                    <i class="material-icons yellow lighten-1">local_dining</i>
-                </a>
-
-
-
-
-                <span class="nav-title yellow-text lighten-1" id="nav">Food Fair Thought</span>
-
-
-
+            <div class="col l4">
+                <img class="logo" src="logo.jpg">
+            
+            
+            
             </div>
+
 
 
             <a class="btn-floating dropdown-button  btn-large halfway-fab waves-effect waves-light"
                 onclick="$('.dropdown-button').dropdown('open');" data-activates="dropdown1">
-                <i class="material-icons yellow lighten-1">add</i>
-
-                <!--Dropdown contents, add stuff later-->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">one</a></li>
-                    <li><a href="#!">two</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">three</a></li>
-                    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-                </ul>
+                <i class="material-icons red">favorite</i>
 
             </a>
         </div>
     </nav>
 
-    <br><br>
-   
+    <!--Put navbar-->
+    <div class="row">
+        <div class="col l12">
+          <h3> Your Food Place Generator. Best food at fair prices</h3>
+        </div>
+    </div>
 
-    <div class="container">
+    <!--Generated google map-->
+    <div class="row"><br></div>
+    <div class="row ">
+        <div class="col-md-12">
+            <div id="map">
+           </div>
+        </div>
+    </div>
+
+    <div class="container main">
         <div class = "row">
-
-            <div class = "col l12 m8 s6"></div>
     
-            <div class="card">
+            <div class="card ">
                 <div class="card-content">
-                    <blockquote>Select your options down below</blockquote>
+                    <h3>Select your options down below</h3>
                 </div>
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class ="active" href="#test4">Food Category</a></li>
-                        <li class="tab"><a href="#test5">Price range?</a></li>
-                        <li class="tab"><a href="#test6">Distance</a></li>
+                        <li class="tab"><a class ="active red-text" href="#test4">Food Category</a></li>
+                        
+                        <li class="tab"><a class="red-text" href="#test5">Price Range</a></li>
+
+                        <li class="tab"><a class="red-text" href="#test6">Distance</a></li>
+
+                        <li class="tab"><a class="red-text" href="#test7">Randomize!</a></li>
+
                     </ul>
                 </div>
-                <div class="card-content grey lighten-4">
+
+                <!--Food Categories-->
+                <div class="card-content">
                     <div id="test4">
 
+                        <!--Category Cards-->
                         <div class="row">
-                            <div class="col s12 l2">
-                                <div class="card white"> 
-                                    <span class="black-text text-center "> Food
-                                    </span>
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnRest" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Restaurants</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">restaurant</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Choose this option for a classier scene</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnBar" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Bars</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">local_bar</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Feeling Tipsy?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnCafe" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Cafes</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">local_cafe</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>A quiet place to sip on some joe.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+
+                                        <div>
+                                            <button type="button" id="btnBakery" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Bakeries</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">directions_run</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Carb up!</p>
+                                    </div>
                                 </div>
                             </div>
                             
-                            <div class="col s12 l2">
-                                <div class="card white"> 
-                                    <span class="black-text text-center"> Food
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="col s12 l2">
-                                <div class="card white"> 
-                                    <span class="black-text text-center"> Food
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="col s12 l2">
-                                <div class="card white"> 
-                                    <span class="black-text text-center"> Food
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="col s12 l2">
-                                <div class="card white"> 
-                                    <span class="black-text text-center"> Food
-                                    </span>
-                                </div>
-                            </div>
-                            
-
-
-
                         </div>
+
+
+                            
                         
                     </div>
+
+                    <!--Price range-->
                     <div id="test5">
 
-                        <form action="#">
-                            <a class= "large btn yellow lighten-1">
-                                <input name="group1" type="radio" id="price1" />
-                                <label class="green-text" for="price1">$</label>
-                            </a>
-
-                            <a class= "large btn yellow lighten-1">
-                                <input name="group1" type="radio" id="price2" />
-                                <label class="green-text" for="price2">$$</label>
-                            </a>
-                            <a class= "large btn yellow lighten-1">
-                                <input name="group1" type="radio" id="price3" />
-                                <label class="green-text" for="price3">$$$</label>
-                            </a>
-                            <a class= "large btn yellow lighten-1">
-                                <input name="group1" type="radio" id="price4" />
-                                <label class="green-text" for="price4">$$$$</label>
-                            </a>
-                            <a class= "large btn yellow lighten-1">
-                                <input name="group1" type="radio" id="price5" />
-                                <label class="green-text" for="price5">$$$$$</label>
-                            </a>
-                            
-                        </form>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="slidecontainer">
+                                    <input type="range" min="0" max="4" value="3" class="slider" id="price">
+                                    <p>Between the price index from 0 to 4, what's the maximum you would like pay? <span id="priceIndex"></span></p>
+                                  </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                    
+                        </div>
 
                     </div>
 
 
 
-
+                    <!--Range to drive-->
                     <div id="test6">Range(mi.)
 
-                        <form action="#">
-                            <p class="range-field">
-                                <input type="range" id="distance" min="0" max="100" />
-                            </p>
-                        </form>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                                    <p>Distance in Miles From You: <span id="distance"></span></p>
+                                  </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                    
+                        </div>
 
                     </div>
-                </div>
 
-                <br><br><br>
 
-                <!--Button to initiate Feature Discovery-->
-                <div class="row">
-                    <div class="col l12 m8 s6">
-                        <a class="btn-floating large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="open" onclick="$('.tap-target').tapTarget('open')">Randomize Meal</a>
+                    <!--Button to initiate Feature Discovery-->
+                    <div id="test7">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col l12  s12">
+                                    <a class="col l12 large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="open" onclick="$('.tap-target').tapTarget('open')">Randomize Meal</a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col l12  s12">
+                                    <a class=" col l12 large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+                                </div>
+                            </div>
+
                         
+                        </div>
 
-                        <a class="btn-floating large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+                        <div class="fixed-action-btn">
 
-                        <a class="large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="submit">Submit
+                            <a class="waves-effect waves-light btn btn-floating btn-large yellow lighten-1 pulse" id="open" onclick="$('.tap-target').tapTarget('open')">
+                                <i id="menu" class="material-icons black-text">sentiment_very_satisfied</i>
+                            </a>
+                    
+                            <div class="tap-target yellow lighten-1" data-activates="menu">
+                                <div class="tap-target-content black-text">
+                                <div class="choose">
+                                    <h5>Are you sure you want to randomize?</h5>
+                                </div>
+                                
+                                
+                                <br><br>
                             
-                        </a>
+                                <div class="row">
+                                    <div class="col l12 s12">
+                                        <a class="col l9 large btn white waves-effect waves-light btn black-text col l3 s12">Let's do it!</a>
+                                    </div>
+
+                                    <br><br>
+
+                                    <div class="col l12 s12">
+                                        <a class="col l9 large btn white waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
+
+
                 </div>
+
                 
             </div>
     
@@ -185,57 +258,34 @@
 
     </div>
 
-    
 
-    <!-- Element Showed -->
-    <div class="fixed-action-btn">
-
-        <a id="menu" class="waves-effect waves-light btn btn-floating btn-large yellow lighten-1 pulse">
-            <i class="material-icons black-text">sentiment_very_satisfied</i>
-        </a>
-
-    </div>
-    
-    
-    <!-- Tap Target Structure -->
-    <!-- data-targe abd data-activate-->
-    <div class="tap-target yellow lighten-1" data-activates="menu">
-        <div class="tap-target-content">
-            <h5>Are you Sure you want to randomize?</h5>
-            <a class="large btn  waves-effect waves-light white btn black-text">Do it!</a>
-            <li class ="searchHistory"></li>
-        </div>
-    </div>
-
-    
-
-    <footer class="page-footer yellow darken-1">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
-                    </p>
-                </div>
-                
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="selectedRestaurant">
+                <h4>Chosen Locations
+                    <a class="btn-floating waves-effect waves-light red"><i class="circle material-icons">location_on</i></a>
+                </h4>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2020 Copyright Yellow team
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
-    
-    
+        <div class="col-md-2"></div>
+    </div>
 
-    <!--Hold Alt up and down-->
-    <!--Alt shift-->
-    <!--Ctrl-D adding text to multiple lines of code-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+    <!-- For retireving the library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="assets/javascript/script.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
+
+
+    <script src="script.js"></script>
+
+
+
+
 </body>
+
 </html>
-        

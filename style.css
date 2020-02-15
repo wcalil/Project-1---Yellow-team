@@ -1,62 +1,132 @@
 html {
-    height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body {
-    min-height: 100%;
-    background-image: url("assets/images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    
-}
-
-footer {
-    position:relative;
-}
-
 #nav {
-    position: relative;
-    left: 50px;
-    bottom: 2px;
+  position: relative;
+  left: 50px;
+  bottom: 2px;
 
-    
+  
+}
+
+.logo {
+  height: 150px;
+  width: 300px;
 }
 
 #dine {
-    position: relative;
-    left:30px;
-    bottom: 10px;
+  position: relative;
+  left:30px;
+  bottom: 10px;
 }
 
-.h1 {
-    text-align: center;
+
+body{
+  background-image: url("./backgroundImage.jpg");
+}
+
+.textCard {
+  height:100px;
+  text-align: center;
+}
+
+
+.category {
+  height: auto;
+  width:auto;
+  max-height: auto;
+  overflow: hidden;
+}
+
+.buttons {
+  padding-bottom: 55px;
+}
+
+
+h3{
+  color: black;
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  text
+}
+
+.choose {
+  position: relative;
+  left:35px;
+  top: 20px;
+}
+
+#map{
+  height: 500px;
 
 }
 
-#menu {
-
-    position: relative;
-    float:right;
+.slidecontainer {
+    width: 100%;
+}
+  
+button{
+  width:100%;
 }
 
-#open {
-    position: relative;
-    float:left;
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: black;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: yellow;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: yellow;
+    color:yellow;
+    cursor: pointer;
+  }
+
+  #selectedRestaurant{
     
-}
-
-#close {
+    max-width: auto;
+    padding: 28px;
+    background-color: rgba(255,255,255,.9);
     position: relative;
-    float:left;
     
+  }
+
+#test4 {
+  height:auto;
+  
 }
-
-#submit {
-    position: relative;
-    float:right;
-    
-
-
+#test5 {
+  height:auto;
+  
+}
+#test6{
+  height:auto;
+  
+}
+#test7{
+  height:auto;
+  
 }
