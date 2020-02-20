@@ -1,4 +1,70 @@
-* {
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#nav {
+  position: relative;
+  left: 50px;
+  bottom: 2px;
+
+  
+}
+
+.logo {
+  height: 150px;
+  width: 300px;
+}
+
+#dine {
+  position: relative;
+  left:30px;
+  bottom: 10px;
+}
+
+
+body{
+  background-image: url("./backgroundImage.jpg");
+}
+
+.textCard {
+  height:100px;
+  text-align: center;
+}
+
+
+.category {
+  height: auto;
+  width:auto;
+  max-height: auto;
+  overflow: hidden;
+}
+
+.buttons {
+  padding-bottom: 55px;
+}
+
+
+h3{
+  color: black;
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  
+}
+
+.choose {
+  position: relative;
+  left:35px;
+  top: 20px;
+}
+
+#map{
+  height: 500px;
+
+}
+
+/* * {
     margin:0;
     padding:0;
   
@@ -38,7 +104,7 @@ h3{
 #map{
     height: 500px;
 
-  }
+  } */
 
 .slidecontainer {
     width: 100%;
@@ -48,27 +114,15 @@ button{
   width:100%;
 }
 
-#btnRest{
-  background-color: teal;
-}
 
-#btnBar{
-  background-color: teal;
-}
-
-#btnCafe{
-  background-color: teal;
-}
-
-#btnBakery{
-  background-color: teal;
-}
 
   .slider {
     -webkit-appearance: none;
     width: 100%;
     height: 25px;
-    background: #d3d3d3;
+
+    background: black;
+
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -84,19 +138,49 @@ button{
     appearance: none;
     width: 25px;
     height: 25px;
-    background: teal;
+    
+    background: yellow;
+
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: teal;
+
+    background: yellow;
+    color:yellow;
+
     cursor: pointer;
   }
 
   #selectedRestaurant{
-    font-weight: bold;
+    
+    max-width: auto;
+    padding: 28px;
+    background-color: rgba(255,255,255,.9);
+    position: relative;
+    
+  }
+
+#test4 {
+  height:auto;
+  
+}
+#test5 {
+  height:auto;
+  
+}
+#test6{
+  height:auto;
+  
+}
+#test7{
+  height:auto;
+  
+}
+
+/*     font-weight: bold;
     font-size: larger;
     margin: auto;
     background-color: whitesmoke;
@@ -104,7 +188,7 @@ button{
     padding-left: 20px;
     padding-right: 20px;
     }
-
+ */
 
 
     #foodCard{

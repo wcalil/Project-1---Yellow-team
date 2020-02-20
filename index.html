@@ -6,130 +6,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Food Fair Thought</title>
-    
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    
-    
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-    <!-- <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"> -->
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-   
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>            -->
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> -->
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  -->
-    
-    
     <link rel="stylesheet" href="./style.css">
-   
-
+    
 
 </head>
 
 <body>
-    <div class="row"><br></div>
-    </div>
+    
+    <nav class="nav-extended">
+
+        <div class="nav-content white">
+
+
+            <div class="col l4">
+                <img class="logo" src="logo.jpg">
+            
+            
+            
+            </div>
+
+
+
+            <a class="btn-floating dropdown-button  btn-large halfway-fab waves-effect waves-light"
+                onclick="$('.dropdown-button').dropdown('open');" data-activates="dropdown1">
+                <i class="material-icons red">favorite</i>
+
+            </a>
+        </div>
+    </nav>
+
+    <!--Put navbar-->
     <div class="row">
-        <div class="col-md-12">
-          <h1> Food Fair Thought </h1>
+        <div class="col l12">
           <h3> Your Food Place Generator. Best food at fair prices</h3>
         </div>
     </div>
+
+    <!--Generated google map-->
     <div class="row"><br></div>
-    <div class="row">
+    <div class="row ">
+
         <div class="col-md-12">
             <div id="map">
            </div>
         </div>
     </div>
-    <div class="row"><br></div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2> Choose for me:</h2>
+
+    <div class="container main">
+        <div class = "row">
+    
+            <div class="card ">
+                <div class="card-content">
+                    <h3>Select your options down below</h3>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class ="active red-text" href="#test4">Food Category</a></li>
+                        
+                        <li class="tab"><a class="red-text" href="#test5">Price Range</a></li>
+
+                        <li class="tab"><a class="red-text" href="#test6">Distance</a></li>
+
+                        <li class="tab"><a class="red-text" href="#test7">Randomize!</a></li>
+
+                    </ul>
+                </div>
+
+                <!--Food Categories-->
+                <div class="card-content">
+                    <div id="test4">
+
+                        <!--Category Cards-->
+                        <div class="row">
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnRest" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Restaurants</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">restaurant</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Choose this option for a classier scene</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnBar" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Bars</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">local_bar</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Feeling Tipsy?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+                
+                                        <div>
+                                            <button type="button" id="btnCafe" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Cafes</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">local_cafe</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>A quiet place to sip on some joe.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m3 s12 category">
+                                <div class="card">
+                                    <div class="card-image">
+                                        
+                                        
+
+                                        <div>
+                                            <button type="button" id="btnBakery" class="btn btn-primary btn-lg yellow lighten-1 buttons black-text">Bakeries</button>
+                                        </div>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">directions_run</i></a>
+                                    </div>
+                                    <div class="card-content textCard">
+                                        <p>Carb up!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                            
+                        
+                    </div>
+
+                    <!--Price range-->
+                    <div id="test5">
+
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="slidecontainer">
+                                    <input type="range" min="0" max="4" value="3" class="slider" id="price">
+                                    <p>Between the price index from 0 to 4, what's the maximum you would like pay? <span id="priceIndex"></span></p>
+                                  </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                    
+                        </div>
+
+                    </div>
+
+
+
+                    <!--Range to drive-->
+                    <div id="test6">Range(mi.)
+
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                                    <p>Distance in Miles From You: <span id="distance"></span></p>
+                                  </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                    
+                        </div>
+
+                    </div>
+
+
+                    <!--Button to initiate Feature Discovery-->
+                    <div id="test7">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col l12  s12">
+                                    <a class="col l12 large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="open" onclick="$('.tap-target').tapTarget('open')">Randomize Meal</a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col l12  s12">
+                                    <a class=" col l12 large btn yellow lighten-1 waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+                                </div>
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="fixed-action-btn">
+
+                            <a class="waves-effect waves-light btn btn-floating btn-large yellow lighten-1 pulse" id="open" onclick="$('.tap-target').tapTarget('open')">
+                                <i id="menu" class="material-icons black-text">sentiment_very_satisfied</i>
+                            </a>
+                    
+                            <div class="tap-target yellow lighten-1" data-activates="menu">
+                                <div class="tap-target-content black-text">
+                                <div class="choose">
+                                    <h5>Are you sure you want to randomize?</h5>
+                                </div>
+                                
+                                
+                                <br><br>
+                            
+                                <div class="row">
+                                    <div class="col l12 s12">
+                                        <a class="col l9 large btn white waves-effect waves-light btn black-text col l3 s12">Let's do it!</a>
+                                    </div>
+
+                                    <br><br>
+
+                                    <div class="col l12 s12">
+                                        <a class="col l9 large btn white waves-effect waves-light btn black-text col l3 s12" id="close" onclick="$('.tap-target').tapTarget('close')">Nah, I'm Good!</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+    
+    
         </div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div>
-                <button type="button" id="btnRest" class="btn btn-primary btn-lg">Restaurants</button>
-            </div>
-            <div><br></div>
-            <div>
-                <button type="button" id="btnBar" class="btn btn-primary btn-lg">Bars</button>
-            </div>
-            <div><br></div>
-            <div>
-                <button type="button" id="btnCafe" class="btn btn-primary btn-lg">Cafes</button>
-            </div>
-            <div><br></div>
-            <div>
-                <button type="button" id="btnBakery" class="btn btn-primary btn-lg">Bakeries</button>
-            </div>
-            <div><br></div>
-            <div>
-                <button type="button" id="btnClean" class="btn btn-secondary btn-lg">Delete Favorites</button>
-            </div>
-
-        </div>
-
-        <div class="col-md-4"></div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row"><br></div>
-    <div class="row"><br></div>
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="slidecontainer">
-                <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
-                <p>Distance in Miles From You: <span id="distance"></span></p>
-              </div>
-        </div>
-        <div class="col-md-2"></div>
 
     </div>
 
-    <div class="row"><br></div>
 
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="slidecontainer">
-                <input type="range" min="0" max="4" value="3" class="slider" id="price">
-                <p>Between the price index from 0 to 4, what's the maximum you would like pay? <span id="priceIndex"></span></p>
-              </div>
-        </div>
-        <div class="col-md-2"></div>
-
-    </div>
-
-    <div class="row"><br></div>
 
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div id="selectedRestaurant">
+
+                <h4>Chosen Locations
+                    <a class="btn-floating waves-effect waves-light red"><i class="circle material-icons">location_on</i></a>
+                </h4>
 
             </div>
         </div>
@@ -140,13 +279,17 @@
 
     <!-- For retireving the library -->
 
-    
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejCVcVUkYiYvaLeQ8v84SSXfi4F30ucw&libraries=places"></script>
 
-    
 
     <script src="script.js"></script>
-  
+
+
+
 
 
 </body>
