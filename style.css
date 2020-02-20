@@ -50,7 +50,7 @@ h3{
 
 h5 {
   text-align: center;
-  text
+  
 }
 
 .choose {
@@ -64,6 +64,48 @@ h5 {
 
 }
 
+/* * {
+    margin:0;
+    padding:0;
+  
+}
+
+body{
+  background-image: url("./assets/backgroundImage.jpg");
+  margin-bottom: 2%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1{
+  color: teal;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.col-md-2, .col-md-4, .col-md-12{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+h2{
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+h3{
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+#map{
+    height: 500px;
+
+  } */
+
 .slidecontainer {
     width: 100%;
 }
@@ -73,11 +115,14 @@ button{
 }
 
 
+
   .slider {
     -webkit-appearance: none;
     width: 100%;
     height: 25px;
+
     background: black;
+
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -93,15 +138,19 @@ button{
     appearance: none;
     width: 25px;
     height: 25px;
+    
     background: yellow;
+
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
+
     background: yellow;
     color:yellow;
+
     cursor: pointer;
   }
 
@@ -129,4 +178,59 @@ button{
 #test7{
   height:auto;
   
+}
+
+/*     font-weight: bold;
+    font-size: larger;
+    margin: auto;
+    background-color: whitesmoke;
+    color: teal;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+ */
+
+
+    #foodCard{
+      height: 210px;
+      width: 210px;
+      /* position: absolute; */
+      bottom: 100px;
+      right: 20px;
+      top: 10px;
+    }
+
+
+
+    .carousel.carousel-slider .carousel-item{
+      height: 210px;
+      width: 210px;
+      min-height: 210px;
+    }
+
+.carousel.carousel-slider{
+  height: 210px !important;
+}    
+
+
+#carousel-item{
+  height: 210px;
+}
+.carouselPhoto{
+  height: 210px;
+}
+
+.infoText{
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+
+.infoFooter{
+  display: flex;
+  justify-content: end;
+  
+  /* position: fixed; */
+  /* bottom: 0px; */
 }
